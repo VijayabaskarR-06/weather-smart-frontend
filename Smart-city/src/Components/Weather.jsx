@@ -147,6 +147,7 @@ const SmartCityDashboard = () => {
     const raw = 100 - (tempPenalty + humPenalty);
     return Math.max(0, Math.min(100, Math.round(raw)));
   };
+  // Updated for commit
 
   const calculateIndoorComfort = (current) => {
     if (!current) {
