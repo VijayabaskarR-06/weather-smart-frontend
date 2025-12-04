@@ -35,7 +35,7 @@ import {
   Area,
 } from 'recharts';
 import CrowdReports from './CrowdReports';
-
+ /* Selected city from dropdown*/
 const SmartCityDashboard = () => {
   const [selectedCity, setSelectedCity] = useState('Delhi');
   const [weatherData, setWeatherData] = useState(null);
@@ -43,7 +43,7 @@ const SmartCityDashboard = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [lastUpdated, setLastUpdated] = useState(new Date());
-
+/*Raw responses from Open-Meteo APIs*/
   const indianCities = [
     { name: 'Delhi', lat: 28.6139, lon: 77.2090 },
     { name: 'Mumbai', lat: 19.0760, lon: 72.8777 },
@@ -147,8 +147,7 @@ const SmartCityDashboard = () => {
     const raw = 100 - (tempPenalty + humPenalty);
     return Math.max(0, Math.min(100, Math.round(raw)));
   };
-  // Updated for commit
-
+/*prats comment1 */
   const calculateIndoorComfort = (current) => {
     if (!current) {
       return {
